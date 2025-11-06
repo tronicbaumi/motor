@@ -7,9 +7,9 @@ nutD = 11.2;
 nutT = 5;
 
 thick = 26;
-nutSpace = 20;
+nutSpace = 18.5;
 
-diam = 53;
+diam = 47;
 
 main();
 
@@ -42,12 +42,12 @@ module minus()
     //nuts
     for (a =[0:180:360])
     { 
-        rotate([0,0,a+30])translate([nutSpace,0,thick-nutT])cylinder($fn=6,nutT,nutD/2,nutD/2);
-        rotate([0,0,a+30])translate([nutSpace,0,0])cylinder(thick,7/2,7/2);
+        rotate([0,0,a-30])translate([nutSpace,0,thick-nutT])cylinder($fn=6,nutT,nutD/2,nutD/2);
+        rotate([0,0,a-30])translate([nutSpace,0,0])cylinder(thick,7/2,7/2);
     }
     
     
-    color("red")scale([0.32,0.32,1])translate([-46,-43,thick-2])linear_extrude(2)import("MCHPlogo.svg");
+    color("red")scale([0.28,0.28,1])translate([-46,-43,thick-2])linear_extrude(2)import("MCHPlogo.svg");
 }
 
 
