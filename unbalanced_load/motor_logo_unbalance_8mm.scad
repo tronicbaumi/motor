@@ -21,6 +21,8 @@ module main()
         minus();
 
     }
+    
+
 }
 
 
@@ -32,12 +34,12 @@ module plus()
 module minus()
 {
     // motor shaft
-    translate([0,0,0])rotate([0,0,0])cylinder(14,8.10/2,7.80/2);
-    
+    translate([0,0,0])rotate([0,0,0])cylinder(14,8.30/2,7.80/2);
     
     // broken bearing simulation
-    translate([diam/2+3,0,0])rotate([0,0,0])cylinder(thick-8,3,3);
-    translate([-diam/2-3,0,0])rotate([0,0,0])cylinder(thick/2-5,3,3);
+    translate([diam/2,0,0])rotate([0,0,0])cylinder(thick-8,3,3);
+    translate([-diam/2,0,0])rotate([0,0,0])cylinder(thick/2-5,3,3);
+
     
     //nuts
     for (a =[0:180:360])
